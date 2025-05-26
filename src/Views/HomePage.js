@@ -1,20 +1,25 @@
 // src/Views/HomePage.js
-import React, { useState } from 'react';
+import React from 'react';
 import './HomePage.css';
 
 const HomePage = () => {
-    const [isBlue, setIsBlue] = useState(false);
-
-    const toggleColor = () => {
-        setIsBlue(!isBlue);
+    const handleStart = () => {
+        // Placeholder: You can link to roadmap or signup route
+        alert('Redirecting to your personalized training roadmap...');
     };
 
     return (
-        <div className="cafe-homepage">
-            <h1>Welcome to Webcafe AI</h1>
-            <p>Your go-to solution for AI-driven web applications hhhhh   .</p>
-            <div className={`cafe-color-box ${isBlue ? 'cafe-blue' : 'cafe-red'}`}></div>
-            <button className="cafe-button" onClick={toggleColor}>Change Color</button>
+        <div className="striker-homepage">
+            <h1>Welcome to Striker AI</h1>
+            <p>Your personal AI coach & roadmap for mastering striking offense and defense.</p>
+
+            <div className="striker-box">
+                🥊 Learn. Train. Dominate.
+            </div>
+
+            <button className="striker-button" onClick={handleStart}>
+                Start Your Training
+            </button>
         </div>
     );
 };
