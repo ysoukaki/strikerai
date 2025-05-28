@@ -1,0 +1,246 @@
+@import '../shared.css';
+
+.feature-card {
+    text-align: center;
+    padding: 2.5rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff3e3e, #ff8f8f);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ff3e3e;
+}
+
+.feature-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.feature-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4a4a4a;
+}
+
+.cta-section {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.primary-button {
+    font-size: 1.2rem;
+    padding: 1.2rem 2.5rem;
+    background: linear-gradient(45deg, #ff3e3e, #ff8f8f);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(255, 62, 62, 0.2);
+}
+
+.primary-button:hover {
+    background: linear-gradient(45deg, #ff2525, #ff7f7f);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(255, 62, 62, 0.3);
+}
+
+.pricing-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 6rem;
+    padding: 0 1.5rem;
+}
+
+.pricing-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card.pro {
+    background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+    color: white;
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #ff3e3e;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.pricing-card-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card.pro .pricing-card-header {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.pricing-card-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.price .amount {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.price .period {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.pricing-card.pro .price .period {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.pricing-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+}
+
+.pricing-features li {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.pricing-card.pro .pricing-features li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.pricing-cta {
+    display: block;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.pricing-cta.free {
+    background: #f5f5f5;
+    color: #1a1a1a;
+}
+
+.pricing-cta.pro {
+    background: #ff3e3e;
+    color: white;
+}
+
+.pricing-cta:hover {
+    transform: translateY(-2px);
+}
+
+.pricing-cta.free:hover {
+    background: #ebebeb;
+}
+
+.pricing-cta.pro:hover {
+    background: #ff2525;
+}
+
+.pricing-faq {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.pricing-faq h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.faq-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.faq-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.faq-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card {
+        padding: 1.5rem;
+    }
+
+    .price .amount {
+        font-size: 3rem;
+    }
+}

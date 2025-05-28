@@ -1,0 +1,138 @@
+:root {
+    /* Colors */
+    --background-primary: #0a0a0a;
+    --background-secondary: #111111;
+    --background-tertiary: #1a1a1a;
+    --background-card: rgba(26, 26, 26, 0.5);
+    --background-overlay: rgba(0, 0, 0, 0.8);
+
+    /* Gradients */
+    --gradient-dark: radial-gradient(circle at 50% 50%, #111111 0%, #0a0a0a 100%);
+    --gradient-card: linear-gradient(145deg, rgba(255, 59, 63, 0.08), rgba(255, 59, 63, 0.03));
+    --gradient-hero: linear-gradient(135deg, #0a0a0a 0%, rgba(255, 59, 63, 0.12) 100%);
+    --gradient-text: linear-gradient(45deg, #ff3b3f, #ff5a5e);
+    --gradient-glow: radial-gradient(circle at 50% 50%, rgba(255, 59, 63, 0.15), transparent 70%);
+
+    /* Brand Colors */
+    --brand-primary: #ff3b3f;
+    --brand-hover: #ff5a5e;
+    --brand-muted: rgba(255, 59, 63, 0.6);
+    --brand-shadow: rgba(255, 59, 63, 0.2);
+
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.9);
+    --text-tertiary: rgba(255, 255, 255, 0.7);
+    --text-accent: #ff3b3f;
+
+    /* Common Styles */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 20px;
+    --border-card: 1px solid rgba(255, 59, 63, 0.1);
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+    --spacing-3xl: 6rem;
+
+    /* Transitions */
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.6);
+    --shadow-red: 0 4px 20px rgba(255, 59, 63, 0.3);
+
+    /* Typography */
+    --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+}
+
+/* Global Styles */
+body {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: var(--line-height-normal);
+}
+
+/* Common Button Styles */
+.button-primary {
+    background: var(--brand-primary);
+    color: var(--text-primary);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius-sm);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.button-primary:hover {
+    background: var(--brand-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-red);
+}
+
+/* Card Styles */
+.card {
+    background: var(--background-card);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-lg);
+    border: var(--border-card);
+    position: relative;
+    transition: var(--transition-normal);
+    backdrop-filter: blur(10px);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--brand-shadow);
+    box-shadow: var(--shadow-red);
+}
+
+/* Glass Effect */
+.glass-effect {
+    background: rgba(26, 26, 26, 0.5);
+    backdrop-filter: blur(12px);
+    border: var(--border-card);
+}
+
+/* Section Styles */
+.section {
+    padding: var(--spacing-3xl) var(--spacing-lg);
+    background: var(--gradient-dark);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+/* Text Gradients */
+.gradient-text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

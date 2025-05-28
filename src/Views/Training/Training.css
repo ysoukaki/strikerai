@@ -1,0 +1,193 @@
+@import '../shared.css';
+
+.training-page {
+    min-height: 100vh;
+    background: #0a0a0a;
+    padding-top: 80px;
+}
+
+.training-header {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(180deg, rgba(255, 62, 62, 0.1) 0%, rgba(10, 10, 10, 0) 100%);
+}
+
+.header-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #ff3e3e 0%, #ff6b6b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 auto;
+}
+
+.training-paths-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.training-path {
+    padding: 2rem;
+}
+
+.path-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.path-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #ff3e3e 0%, #ff6b6b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.path-header p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.level-card {
+    background: rgba(255, 62, 62, 0.1);
+    border: 1px solid rgba(255, 62, 62, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    color: white;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.level-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 62, 62, 0.2);
+    background: rgba(255, 62, 62, 0.15);
+    border-color: rgba(255, 62, 62, 0.3);
+}
+
+.level-header {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 62, 62, 0.2);
+    padding-bottom: 1rem;
+}
+
+.level-number {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #ff3e3e;
+}
+
+.level-header h3 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.phase-subtitle {
+    display: block;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0.5rem;
+}
+
+.phase-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.level-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.level-content li {
+    display: flex;
+    align-items: center;
+    margin: 0.8rem 0;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.skill-bullet {
+    margin-right: 0.8rem;
+    color: #ff3e3e;
+}
+
+@media (max-width: 1600px) {
+    .training-paths-container {
+        grid-template-columns: 1fr;
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 768px) {
+    .training-header {
+        padding: 3rem 1rem;
+    }
+
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+    }
+
+    .path-header h2 {
+        font-size: 2rem;
+    }
+
+    .training-path {
+        padding: 1rem;
+    }
+
+    .level-card {
+        padding: 1.5rem;
+    }
+
+    .level-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .phase-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .phase-description {
+        font-size: 1rem;
+    }
+}
